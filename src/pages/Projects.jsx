@@ -8,10 +8,11 @@ const Projects = () => {
   const [certificates, setCertificates] = useState([]);
   useEffect(() => {
     axios.get('/certificates.json')
-    .then(res => res.json())
-    .then(response => {
-      console.log(response.data);
-      setCertificates(response.data);
+    .then(res => {
+      // console.log(res);
+      // console.log(res.data);
+      // console.log(res.data.data);
+      setCertificates(res.data.data);
     })
   }, [])
   // const certificates = [
