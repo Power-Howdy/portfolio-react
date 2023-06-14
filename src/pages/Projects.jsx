@@ -9,7 +9,7 @@ const Projects = () => {
         console.log(res.data);
       })
       .catch(error => {
-        console.log(err);
+        console.log(error);
       })
   }, [])
   const certificates = [
