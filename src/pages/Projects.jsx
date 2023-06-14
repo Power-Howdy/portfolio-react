@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "../components/Projects/ProjectCard";
 import Particle from "../components/Particle";
-import pg from "../assets/projects/pg.png";
-import project from "../assets/projects/project.jpeg";
-import lift from "../assets/projects/lift.png";
-import krypto from "../assets/projects/krypto.png";
-import kickstart from "../assets/projects/kickstart.png";
 import TestDomeCertificate from "../components/TestDomeCertificate";
 const Projects = () => {
+  useEffect(() => {
+    fetch("https://some.url/certificates.json")
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch(error => {
+        console.log(err);
+      })
+  }, [])
   const certificates = [
     { 'React': 'https://www.testdome.com/certificates/828bd8656a104c8184596b0840d47fe2'}
   ];
