@@ -13,7 +13,7 @@ const About = () => {
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
-          <Col md={8} className="home-about-description" data-aos='fade-down'>
+          <Col md={8} className="home-about-description" data-aos='fade-up'>
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="yellow"> INTRODUCE </span> MYSELF
             </h1>
@@ -62,7 +62,7 @@ const About = () => {
           </Col>
           <Col md={4} className="myAvtar" data-aos="fade-up">
             <Tilt>
-              <img src={LaptopImg} className="img-fluid" alt="avatar" />
+              <img src={LaptopImg} className="img-fluid" alt="avatar" data-aos="fade-down" />
             </Tilt>
           </Col>
         </Row>

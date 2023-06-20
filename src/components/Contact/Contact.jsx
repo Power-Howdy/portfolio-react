@@ -1,10 +1,14 @@
-import React,{useState, useRef} from 'react'
+import React,{useState, useRef, useEffect } from 'react'
 import emailjs from "@emailjs/browser";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
+import AOS from "aos"
 import './Contact.css'
 
 const Contact = () => {
+    useEffect(() => {
+      AOS.init();
+    }, [])
     const form = useRef();
     const [done, setDone] = useState(false)
     const [notDone, setNotDone] = useState(false)

@@ -10,6 +10,7 @@
     "aos": "^2.3.4",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "mdb-react-ui-kit": "^6.1.0",
     "nanoid": "^4.0.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",

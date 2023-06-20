@@ -7,6 +7,7 @@ import Particle from '../components/Particle'
 import pdf from "../assets/resume.pdf"
 
 import { Document, Page, pdfjs } from "react-pdf";
+import { MDBSpinner } from 'mdb-react-ui-kit';
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -39,7 +40,9 @@ const Resume = () => {
         </Row>
 
         <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
+          <Document file={pdf} className="d-flex justify-content-center" loading={<MDBSpinner role='status'>
+        <span className='visually-hidden'>Loading...</span>
+      </MDBSpinner>}>
             <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
         </Row>
