@@ -1,21 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import LaptopImg from "../../assets/home-main.svg";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import AOS from "aos";
 
 
 const About = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
+          <Col md={8} className="home-about-description" data-aos='fade-down'>
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="yellow"> INTRODUCE </span> MYSELF
             </h1>
@@ -62,7 +60,7 @@ const About = () => {
 
             </p>
           </Col>
-          <Col md={4} className="myAvtar">
+          <Col md={4} className="myAvtar" data-aos="fade-up">
             <Tilt>
               <img src={LaptopImg} className="img-fluid" alt="avatar" />
             </Tilt>
