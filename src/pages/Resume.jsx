@@ -44,7 +44,7 @@ const Resume = () => {
             <span className='visually-hidden'>Loading...</span>
           </MDBSpinner>}>
         {[1,2,3].map(page => (
-              <Page pageNumber={page} scale={width > 786 ? 1.7 : 0.6}/>
+              <Page pageNumber={page} scale={width > 786 ? 1.7 : 0.6} style={{ margin: 10, clearFix: 'both'}}/>
           ))}
             {/* <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} /> */}
 
