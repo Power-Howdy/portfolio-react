@@ -39,15 +39,13 @@ const Resume = () => {
           </Button>
         </Row>
 
-        <Row className="resume">
-          <Document file={pdf} className="justify-content-center" loading={<MDBSpinner role='status'>
+        <Row style={{ justifyContent: "center", position: "relative" }}>
+          <Document file={pdf} loading={<MDBSpinner role='status'>
             <span className='visually-hidden'>Loading...</span>
           </MDBSpinner>}>
-        {[1,2,3].map(page => (
-              <Page pageNumber={page} scale={width > 786 ? 1.7 : 0.6} style={{ margin: 10, clearFix: 'both'}}/>
-          ))}
-            {/* <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} /> */}
-
+            {[1,2,3].map(page => (
+                <Page pageNumber={page} scale={width > 786 ? 1.7 : 0.6} style={{ margin: 10, clearFix: 'both'}}/>
+            ))}
           </Document>
         </Row>
 
