@@ -40,7 +40,7 @@ const Resume = () => {
         </Row>
 
         <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center" loading={<MDBSpinner role='status'>
+          <Document file={pdf} className="justify-content-center" loading={<MDBSpinner role='status'>
             <span className='visually-hidden'>Loading...</span>
           </MDBSpinner>}>
         {[1,2,3].map(page => (
