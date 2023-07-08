@@ -41,9 +41,13 @@ const Resume = () => {
 
         <Row className="resume">
           <Document file={pdf} className="d-flex justify-content-center" loading={<MDBSpinner role='status'>
-        <span className='visually-hidden'>Loading...</span>
-      </MDBSpinner>}>
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+            <span className='visually-hidden'>Loading...</span>
+          </MDBSpinner>}>
+        {[1,2,3].map(page => (
+              <Page pageNumber={page} scale={width > 786 ? 1.7 : 0.6}/>
+          ))}
+            {/* <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} /> */}
+
           </Document>
         </Row>
 
