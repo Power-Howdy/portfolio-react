@@ -40,11 +40,11 @@ const Resume = () => {
         </Row>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Document file={pdf} loading={<MDBSpinner role='status'>
+          <Document file={pdf} style={{ justifyContent: "center", position: "relative" }} loading={<MDBSpinner role='status'>
             <span className='visually-hidden'>Loading...</span>
           </MDBSpinner>}>
             {[1,2,3].map(page => (
-                <Page pageNumber={page} scale={width > 786 ? 1.7 : 0.6} style={{ margin: 10, clearFix: 'both'}}/>
+                <Page pageNumber={page} scale={width > 786 ? 1.7 : 0.6} style={{ marginBottom: 30 }}/>
             ))}
           </Document>
         </Row>
