@@ -4,6 +4,9 @@ import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 
 import Particle from '../components/Particle'
+
+import PdfViewer from "../components/PdfViewer";
+
 import pdf from "../assets/resume.pdf"
 
 import { Document, Page, pdfjs } from "react-pdf";
@@ -27,7 +30,8 @@ const Resume = () => {
     <div>
       <Container fluid className="resume-section">
         <Particle />
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+        <PdfViewer fileUrl={pdf} />
+        {/* <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
             href={pdf}
@@ -59,7 +63,7 @@ const Resume = () => {
             <AiOutlineDownload />
             &nbsp;Download Resume
           </Button>
-        </Row>
+        </Row> */}
       </Container>
     </div>
   )
