@@ -1,17 +1,16 @@
 import React from 'react'
-import {  Viewer } from '@react-pdf-viewer/core';
-
-import '@react-pdf-viewer/core/lib/styles/index.css';
+import {  Viewer, Worker } from '@react-pdf-viewer/core';
 import { toolbarPlugin } from '@react-pdf-viewer/toolbar';
 
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/toolbar/lib/styles/index.css';
 
-// Your render function
-const toolbarPluginInstance = toolbarPlugin();
-const { Toolbar } = toolbarPluginInstance;
+
 
 export default function PdfViewer({fileUrl}) {
+    // Your render function
+    const toolbarPluginInstance = toolbarPlugin();
+    const { Toolbar } = toolbarPluginInstance;
     return (
         <div
             className="rpv-core__viewer"
@@ -39,7 +38,9 @@ export default function PdfViewer({fileUrl}) {
                     overflow: 'hidden',
                 }}
             >
-                <Viewer fileUrl={fileUrl} plugins={[toolbarPluginInstance]} />
+                <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js`}>
+                    <Viewer fileUrl={fileUrl} plugins={[toolbarPluginInstance]} />
+                </Worker>
             </div>
         </div>
     )
