@@ -25,6 +25,7 @@ const Skillset = () => {
           <strong className="yellow">Tools</strong> I use
         </h1>
         <Toolstack />
+        <Github/>
       </Container>
     </Container>
   )

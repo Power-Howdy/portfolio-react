@@ -28,13 +28,12 @@ const Contact = () => {
     } else {
       
       //  Please use your own credentials from emailjs or i will recive your email
-      
     emailjs
       .sendForm(
-        "service_niilndo",
-        "template_6z5idye",
+        "service_0az540f",//emailServiceID
+        "template_uti5wxk",//emailTemplateID
         form.current,
-        "VOBt6Akm1LhI5CZG-"
+        "Hq4kN7TiJgm_rh6iP"//public api key
       )
       .then(
         (result) => {

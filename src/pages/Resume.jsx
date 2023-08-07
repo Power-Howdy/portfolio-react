@@ -1,72 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import { AiOutlineDownload } from "react-icons/ai";
-
-import Particle from '../components/Particle'
-
-import PdfViewer from "../components/PdfViewer";
-
-import pdf from "../assets/resume.pdf"
-
-import { Document, Page, pdfjs } from "react-pdf";
-import { MDBSpinner } from 'mdb-react-ui-kit';
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import "react-pdf/dist/esm/Page/TextLayer.css";
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
-// const resumeLink = `https://raw.githubusercontent.com/19sajib/portfolio/main/src/assets/sajib.pdf`
-
-
+import React from "react";
+import { Container } from "react-bootstrap";
+import Particle from "../components/Particle";
+import pdf from "../assets/resume.pdf";
 const Resume = () => {
-  const [width, setWidth] = useState(1200);
-
-  useEffect(() => {
-
-    setWidth(window.innerWidth);
-  }, []);
-
   return (
     <div>
       <Container fluid className="resume-section">
         <Particle />
-        <PdfViewer fileUrl={pdf} />
-        {/* <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download Resume
-          </Button>
-        </Row>
-
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Document file={pdf} style={{ justifyContent: "center", position: "relative" }} loading={<MDBSpinner role='status'>
-            <span className='visually-hidden'>Loading...</span>
-          </MDBSpinner>}>
-            {[1,2,3].map(page => (
-                <Page pageNumber={page} scale={width > 786 ? 1.7 : 0.6} style={{ marginBottom: 30 }}/>
-            ))}
-          </Document>
-        </Row>
-
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download Resume
-          </Button>
-        </Row> */}
+          <iframe src={pdf} title="Resume" width={"100%"} height="2200px" id="ResumeFrame"/>
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Resume
+export default Resume;

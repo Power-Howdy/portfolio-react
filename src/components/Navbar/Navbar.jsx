@@ -3,15 +3,9 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import {
-  // AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineContacts
-} from "react-icons/ai";
-import { GiSkills } from "react-icons/gi"
+import { AiOutlineHome, AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { GiSkills } from "react-icons/gi";
 import { CgFileDocument } from "react-icons/cg";
-
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -36,7 +30,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          Walter Hagen
+          Edmond Vitel
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
