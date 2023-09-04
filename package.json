@@ -23,13 +23,13 @@
     "react-tsparticles": "^2.10.1",
     "scope": "^0.10.1",
     "typewriter-effect": "^2.19.0",
+    "vite-plugin-checker": "^0.6.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +50,10 @@
     ]
   },
   "devDependencies": {
-    "pdfjs-dist": "^3.4.120"
+    "@vitejs/plugin-react": "^4.0.4",
+    "pdfjs-dist": "^3.4.120",
+    "vite": "^4.4.9",
+    "vite-plugin-svgr": "^3.2.0",
+    "vite-tsconfig-paths": "^4.2.0"
   }
 }

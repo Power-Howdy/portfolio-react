@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import { AiOutlineHome, AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineContacts } from "react-icons/ai";
 import { GiSkills } from "react-icons/gi";
 import { CgFileDocument } from "react-icons/cg";
 
@@ -83,7 +83,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* <Nav.Item>
+            <Nav.Item>
               <Nav.Link
                 as={Link}
                 to="/contact"
@@ -91,7 +91,7 @@ function NavBar() {
               >
                 <AiOutlineContacts style={{ marginBottom: "2px" }} /> Contact Me
               </Nav.Link>
-            </Nav.Item> */}
+            </Nav.Item>
 
             {/* <Nav.Item className="fork-btn">
               <Button
