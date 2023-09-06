@@ -23,19 +23,20 @@ const Contact = () => {
     const sendEmail = (e) => {
     e.preventDefault();
     
-    if(!formData.from_name || !formData.reply_to ||!formData.message){
+    if(!formData.reply_to ||!formData.message){
       setNotDone(true)
     } else {
-      
-      //  Please use your own credentials from emailjs or i will recive your email
-    emailjs
-      .sendForm(
-        "service_0az540f",//emailServiceID
-        "template_uti5wxk",//emailTemplateID
-        form.current,
-        "Hq4kN7TiJgm_rh6iP"//public api key
-      )
-      .then(
+      emailjs.send(
+        "service_0az540f",
+        "template_uti5wxk",
+        {
+          to_email: "giftedclan0305@gmail.com",
+          from_name: formData.reply_to,
+          to_name: "Customer",
+          text_message: formData.message,
+        },
+        "Hq4kN7TiJgm_rh6iP"
+      ).then(
         (result) => {
           console.log(result.text);
           setDone(true);
@@ -43,7 +44,7 @@ const Contact = () => {
         (error) => {
           console.log(error.text);
         }
-      );
+      );      
     }
     };
     
@@ -57,12 +58,11 @@ const Contact = () => {
             </Col>
             <Col md={6} className="c-right">
                 <form ref={form} onSubmit={sendEmail}>
-                <input type="text" name="from_name" className="user"  placeholder="Name" onChange={handleChange}/>
-                <input type="email" name="reply_to" className="user" placeholder="Email" onChange={handleChange} />
-                <textarea name="message" className="user" placeholder="Message" onChange={handleChange} />
+                <input type="email" required name="reply_to" className="user" placeholder="Email" onChange={handleChange} />
+                <textarea name="message" required className="user" placeholder="Message" onChange={handleChange} />
                 <span className='not-done' >{notDone && "Please, fill all the input field"}</span>
                 <Button type="submit" className="button" disabled={done}>Send</Button>
-                <span className='done'>{done && "Thanks for contacting me and be sure i have recieved your mail. If you are testing this functionality then i am confirming this thing working perfectly fine. If you have any serious query then i will reply. Also if you need me, you can conatct me on Linkedin."}</span>
+                <span className='done'>{done && "Thanks for contacting me and I will be in touch as soon as possible."}</span>
                 </form>
             </Col>
             </Row>
