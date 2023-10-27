@@ -5,13 +5,14 @@ import Particle from '../components/Particle';
 import About from '../components/Home/About';
 import Type from '../components/Home/Type';
 import AOS from "aos";
-
+import AvatarCreatorComponent from './AvatarCreatorComponent';
 const Home = () => {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <section>
+      <AvatarCreatorComponent />
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
