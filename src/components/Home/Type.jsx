@@ -9,14 +9,14 @@ const Type = () => {
           "MERN Stack Developer",
           "Passionate PHP Developer",
           "Skillful Python Developer",
-          "Effective Problem Solver"
+          "Effective Problem Solver",
         ],
         autoStart: true,
         loop: true,
         deleteSpeed: 50,
       }}
     />
-  )
-}
+  );
+};
 
-export default Type
+export default Type;

@@ -7,7 +7,13 @@ const Resume = () => {
     <div>
       <Container fluid className="resume-section">
         <Particle />
-          <iframe src={pdf} title="Resume" width={"100%"} height="2200px" id="ResumeFrame"/>
+        <iframe
+          src={pdf}
+          title="Resume"
+          width={"100%"}
+          height="2200px"
+          id="ResumeFrame"
+        />
       </Container>
     </div>
   );

@@ -11,6 +11,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "neo-async": "^2.6.2",
+    "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
@@ -30,7 +31,13 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "npx eslint --ext .jsx src/**",
+    "prepare": "husky install",
+    "format": "prettier --write \"src/**/*.jsx\""
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +59,10 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.4",
+    "eslint": "^8.52.0",
+    "eslint-plugin-react": "^7.33.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
     "pdfjs-dist": "^3.4.120",
     "vite": "^4.4.9",
     "vite-plugin-svgr": "^3.2.0",

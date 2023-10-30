@@ -17,6 +17,6 @@ const Github = () => {
       />
     </Row>
   );
-}
+};
 
 export default Github;

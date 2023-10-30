@@ -1,25 +1,20 @@
 import Aos from "aos";
 import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
-import {
-  DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiGit,
-} from "react-icons/di";
+import { DiJavascript1, DiReact, DiNodejs, DiGit } from "react-icons/di";
 import {
   SiMaterialui,
   SiGraphql,
   SiSolidity,
   SiRedux,
   SiMongodb,
-  SiHtml5
+  SiHtml5,
 } from "react-icons/si";
 
 const Techstack = () => {
   useEffect(() => {
     Aos.init();
-  }, [])
+  }, []);
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons" data-aos="zoom-in">
@@ -54,6 +49,6 @@ const Techstack = () => {
       </Col>
     </Row>
   );
-}
+};
 
 export default Techstack;

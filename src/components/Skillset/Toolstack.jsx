@@ -5,14 +5,14 @@ import {
   SiPostman,
   SiHeroku,
   SiVercel,
-  SiNetlify
+  SiNetlify,
 } from "react-icons/si";
 import AOS from "aos";
 
 const Toolstack = () => {
   useEffect(() => {
     AOS.init();
-  }, [])
+  }, []);
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons" data-aos="zoom-in">
@@ -32,6 +32,6 @@ const Toolstack = () => {
       </Col>
     </Row>
   );
-}
+};
 
 export default Toolstack;

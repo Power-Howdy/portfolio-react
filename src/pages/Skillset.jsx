@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
-
-import Particle from '../components/Particle'
+import Particle from "../components/Particle";
 import Techstack from "../components/Skillset/Techstack";
 import Toolstack from "../components/Skillset/Toolstack";
 import Github from "../components/Skillset/Github";
@@ -10,7 +9,7 @@ import AOS from "aos";
 const Skillset = () => {
   useEffect(() => {
     AOS.init();
-  }, [])
+  }, []);
   return (
     <Container fluid className="about-section">
       <Particle />
@@ -19,16 +18,16 @@ const Skillset = () => {
           Professional <strong className="yellow">Skillset </strong>
         </h1>
 
-        <Techstack/>
+        <Techstack />
 
-        <h1 className="project-heading"  data-aos="fade-down">
+        <h1 className="project-heading" data-aos="fade-down">
           <strong className="yellow">Tools</strong> I use
         </h1>
         <Toolstack />
-        <Github/>
+        <Github />
       </Container>
     </Container>
-  )
-}
+  );
+};
 
-export default Skillset
+export default Skillset;

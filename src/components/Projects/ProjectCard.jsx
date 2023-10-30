@@ -36,5 +36,5 @@ const ProjectCard = (props) => {
       </Card.Body>
     </Card>
   );
-}
+};
 export default ProjectCard;

@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from '../assets/about.png'
-import Particle from '../components/Particle';
-import About from '../components/Home/About';
-import Type from '../components/Home/Type';
+import homeLogo from "../assets/about.png";
+import Particle from "../components/Particle";
+import About from "../components/Home/About";
+import Type from "../components/Home/Type";
 import AOS from "aos";
-import AvatarCreatorComponent from './AvatarCreatorComponent';
+import AvatarCreatorComponent from "./AvatarCreatorComponent";
 const Home = () => {
   useEffect(() => {
     AOS.init();
@@ -48,6 +48,6 @@ const Home = () => {
       <About />
     </section>
   );
-}
+};
 
-export default Home
+export default Home;

@@ -1,13 +1,13 @@
-import { AvatarCreator } from '@readyplayerme/react-avatar-creator';
+import { AvatarCreator } from "@readyplayerme/react-avatar-creator";
 
 const config = {
   clearCache: true,
-  bodyType: 'fullbody',
+  bodyType: "fullbody",
   quickStart: false,
-  language: 'en',
+  language: "en",
 };
 
-const style = { width: '100%', height: '100vh', border: 'none' };
+const style = { width: "100%", height: "100vh", border: "none" };
 
 export default function AvatarCreatorComponent() {
   const handleOnAvatarExported = (event) => {
@@ -16,7 +16,12 @@ export default function AvatarCreatorComponent() {
 
   return (
     <>
-      <AvatarCreator subdomain="https://test-app-dwcquj.readyplayer.me?frameApi" config={config} style={style} onAvatarExported={handleOnAvatarExported} />
+      <AvatarCreator
+        subdomain="https://test-app-dwcquj.readyplayer.me?frameApi"
+        config={config}
+        style={style}
+        onAvatarExported={handleOnAvatarExported}
+      />
     </>
   );
 }
