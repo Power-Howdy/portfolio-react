@@ -1,6 +1,12 @@
 import React from "react";
-function PreLoader(props) {
-  return <div id={props.load ? "preloader" : "preloader-none"}></div>;
+import PropTypes from "prop-types";
+
+function PreLoader({ load }) {
+  return <div id={load ? "preloader" : "preloader-none"}></div>;
 }
+
+PreLoader.propTypes = {
+  load: PropTypes.bool,
+};
 
 export default PreLoader;

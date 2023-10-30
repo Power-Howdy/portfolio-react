@@ -5,7 +5,6 @@ import Particle from "../components/Particle";
 import About from "../components/Home/About";
 import Type from "../components/Home/Type";
 import AOS from "aos";
-import AvatarCreatorComponent from "./AvatarCreatorComponent";
 const Home = () => {
   useEffect(() => {
     AOS.init();
@@ -25,7 +24,7 @@ const Home = () => {
               </h1>
 
               <h1 className="heading-name">
-                I'M
+                I&apos;M
                 <strong className="main-name"> Edmond Vitel</strong>
               </h1>
 

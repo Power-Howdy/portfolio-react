@@ -18,7 +18,7 @@ const Projects = () => {
             <strong className="yellow">Certificates Earned</strong>
           </h1>
           <p style={{ color: "white" }}>
-            Here are a few certificates I've earned so far.
+            Here are a few certificates I&apos;ve earned so far.
           </p>
         </Row>
 

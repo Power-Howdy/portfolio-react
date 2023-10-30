@@ -4,6 +4,8 @@ import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 
+import PropTypes from "prop-types";
+
 const ProjectCard = (props) => {
   return (
     <Card className="project-card-view">
@@ -37,4 +39,14 @@ const ProjectCard = (props) => {
     </Card>
   );
 };
+
+ProjectCard.propTypes = {
+  isBlog: PropTypes.bool,
+  demoLink: PropTypes.string,
+  description: PropTypes.string,
+  title: PropTypes.string,
+  ghLink: PropTypes.string,
+  imgPath: PropTypes.string,
+};
+
 export default ProjectCard;

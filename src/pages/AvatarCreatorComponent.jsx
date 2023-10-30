@@ -1,5 +1,5 @@
 import { AvatarCreator } from "@readyplayerme/react-avatar-creator";
-
+import React from "react";
 const config = {
   clearCache: true,
   bodyType: "fullbody",

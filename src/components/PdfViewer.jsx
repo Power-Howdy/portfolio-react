@@ -1,7 +1,7 @@
 import React from "react";
 import { Viewer, Worker } from "@react-pdf-viewer/core";
 import { toolbarPlugin } from "@react-pdf-viewer/toolbar";
-
+import PropTypes from "prop-types";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/toolbar/lib/styles/index.css";
 
@@ -37,7 +37,9 @@ export default function PdfViewer({ fileUrl }) {
         }}
       >
         <Worker
-          workerUrl={`https://unpkg.com/pdfjs-dist@latest/build/pdf.worker.min.js`}
+          workerUrl={
+            "https://unpkg.com/pdfjs-dist@latest/build/pdf.worker.min.js"
+          }
         >
           <Viewer fileUrl={fileUrl} plugins={[toolbarPluginInstance]} />
         </Worker>
@@ -45,3 +47,7 @@ export default function PdfViewer({ fileUrl }) {
     </div>
   );
 }
+
+PdfViewer.propTypes = {
+  fileUrl: PropTypes.string,
+};
