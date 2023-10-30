@@ -34,7 +34,7 @@
     "serve": "vite preview",
     "lint": "npx eslint --ext .jsx src/**",
     "prepare": "husky install",
-    "format": "prettier --write \"src/**/*.jsx\""
+    "format": "prettier --write \"src/**/*.{jsx,css}\""
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
